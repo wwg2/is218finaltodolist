@@ -11,3 +11,23 @@ if(!isset($_SESSION['email'])) {
 include '../models/Database.php';
 include '../models/User.php';
 include '../models/Todo.php';
+$action = filter_input(INPUT_POST, 'action');
+$status = null;
+$edit_id = null;
+switch($action) {
+    case 'add_todo':
+        $status = add_todo();
+        break;
+    case 'set_edit_todo':
+        $edit_id = set_edit_todo();
+        break;
+    case 'edit_todo':
+        $status = edit_todo();
+        break;
+    case 'delete_todo':
+        $status = delete_todo();
+        break;
+    case 'toggle_todo':
+        $status = toggle_todo();
+        break;
+}

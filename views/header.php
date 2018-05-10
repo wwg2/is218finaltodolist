@@ -11,7 +11,7 @@
 
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
-    <link href="https://web.njit.edu/~dg94/is218/todo/assets/css/main.css" rel="stylesheet">
+    <link href="https://web.njit.edu/~snh7/is218/todo/assets/css/main.css" rel="stylesheet">
     <title>Todo App</title>
   </head>
 
@@ -19,7 +19,7 @@
 
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
 
-      <a class="navbar-brand" href="https://web.njit.edu/~dg94/is218/todo/">My Todo App</a>
+      <a class="navbar-brand" href="https://web.njit.edu/~snh7/is218/todo/">My Todo App</a>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto"></ul>
@@ -27,10 +27,10 @@
          ?>
           <ul class="navbar-nav float-right">
             <li class="nav-item active">
-              <a class="nav-link" href="https://web.njit.edu/~dg94/is218/todo/login">Login</a>
+              <a class="nav-link" href="https://web.njit.edu/~snh7/is218/todo/login">Login</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="https://web.njit.edu/~dg94/is218/todo/register">Register</a>
+              <a class="nav-link" href="https://web.njit.edu/~snh7/is218/todo/register">Register</a>
             </li>
           </ul>
         <?php else: 
@@ -38,7 +38,7 @@
 
             <ul class="navbar-nav float-right">
               <li class="nav-item active">
-                <a class="nav-link" href="https://web.njit.edu/~dg94/is218/todo/logout">Logout</a>
+                <a class="nav-link" href="https://web.njit.edu/~snh7/is218/todo/logout">Logout</a>
               </li>
             </ul>
             

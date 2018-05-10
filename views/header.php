@@ -23,4 +23,15 @@
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto"></ul>
+                <?php if(!isset($_SESSION['email'])):
+         ?>
+          <ul class="navbar-nav float-right">
+            <li class="nav-item active">
+              <a class="nav-link" href="https://web.njit.edu/~dg94/is218/todo/login">Login</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="https://web.njit.edu/~dg94/is218/todo/register">Register</a>
+            </li>
+          </ul>
 
+       

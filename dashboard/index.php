@@ -31,3 +31,41 @@ switch($action) {
         $status = toggle_todo();
         break;
 }
+
+show_dashboard($status, $edit_id);
+function add_todo() {
+    $todo = new Todo();
+    $todo->setUserId($_SESSION['id']);
+    $todo->setTitle(filter_input(INPUT_POST, 'title', FILTER_SANITIZE_SPECIAL_CHARS));
+    $todo->setCompleted(0);
+    $todo->setUserEmail($_SESSION['email']);
+    $todo->setDueDate(filter_input(INPUT_POST, 'due-date', FILTER_SANITIZE_SPECIAL_CHARS));
+    return $todo->create();
+}
+
+function delete_todo() {
+    $id = filter_input(INPUT_POST, 'todo-id', FILTER_VALIDATE_INT);
+    return Todo::deleteTodoById($id);
+}
+
+function toggle_todo() {
+    $id = filter_input(INPUT_POST, 'todo-id', FILTER_VALIDATE_INT);
+    return Todo::toggleCompletedById($id);
+}
+
+function set_edit_todo() {
+    return filter_input(INPUT_POST, 'todo-id', FILTER_VALIDATE_INT);
+}
+
+function edit_todo() {
+    $id = filter_input(INPUT_POST, 'todo-id', FILTER_VALIDATE_INT);
+    $title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_SPECIAL_CHARS);
+    $due_date = filter_input(INPUT_POST, 'due-date', FILTER_SANITIZE_SPECIAL_CHARS);
+    return Todo::edit($id, $title, $due_date);
+}
+
+function show_dashboard($status = null, $edit_id = null) {
+    $todos = Todo::getTodosByUserId($_SESSION['id']);
+    include '../views/dashboard.php';
+}
+ ?>

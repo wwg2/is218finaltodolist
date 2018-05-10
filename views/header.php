@@ -33,5 +33,17 @@
               <a class="nav-link" href="https://web.njit.edu/~dg94/is218/todo/register">Register</a>
             </li>
           </ul>
+        <?php else: 
+        ?>
 
-       
+            <ul class="navbar-nav float-right">
+              <li class="nav-item active">
+                <a class="nav-link" href="https://web.njit.edu/~dg94/is218/todo/logout">Logout</a>
+              </li>
+            </ul>
+            
+        <?php endif; 
+        ?>
+      </div>
+    </nav>
+

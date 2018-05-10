@@ -8,3 +8,6 @@ session_start();
 if(!isset($_SESSION['email'])) {
     header('Location: ../login');
 }
+include '../models/Database.php';
+include '../models/User.php';
+include '../models/Todo.php';
